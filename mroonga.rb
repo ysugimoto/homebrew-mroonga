@@ -57,7 +57,7 @@ class Mroonga < Formula
         end
       end
     else
-      mysql_source_path = option_value("--with-mysql-source")
+      mysql_source_path = ARGV.include?("--with-mysql-source")
       if mysql_source_path.nil?
         raise "--use-homebrew-mysql, --use-homebrew-mariadb or --with-mysql-source=PATH is required"
       end
